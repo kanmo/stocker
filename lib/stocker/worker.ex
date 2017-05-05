@@ -31,7 +31,7 @@ defmodule Stocker.Worker do
           end
 
         low_price =
-          case Floki.find(body, ".innerDate, div dl dd strong") |> Enum.at(3) do
+          case Floki.find(body, ".innerDate, div dl dd strong") |> Enum.at(4) do
             nil -> "---"
             elm -> Floki.text(elm)
           end
